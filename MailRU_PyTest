@@ -1,0 +1,24 @@
+list = [101,100,-55,0]
+
+def test_list1(list):
+	assert (any(num%2==0 for num in list))
+
+def test_list2(list):
+	assert (any(num<0 for num in list))
+
+def test_list3(list):
+	try:
+		assert (list[0]/0)
+	except ZeroDivisionError:
+		pass
+
+tuple=("Computer", 101, True, -15)
+
+def test_tuple1(tuple):
+	assert(any(num%2==0 for num in tuple))
+
+def test_tuple2(tuple):
+	assert(any(num==True for num in tuple))
+
+def test_tuple3(tuple):
+	assert(any(num=="Computer" for num in tuple))
